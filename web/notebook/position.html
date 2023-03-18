@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Html_Css-master/jonty/css/reset.css">
+    <title>Document</title>
+    <style>
+        body{
+            height: 2500px;
+            font-size: 50px;
+            text-align: center;
+            line-height: 200px;
+        }
+
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: aliceblue;
+        }
+
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-color: antiquewhite;
+            
+            /* 
+                定位 position属性
+                    - 定位是一种更加高级的布局手段
+                    - 通过定位可以将元素摆放到页面的任意位置
+                - 可选值:
+                    static      静止(默认值)
+                    relative    相对定位
+                    absolute    绝对定位
+                    fixed       固定定位
+                    sticky      粘滞定位
+            */
+
+            /* 
+                - 相对定位:
+                    1. 相对于自己原先的在文档流中的位置来定位
+                    2. 相对定位会提升元素的层级(甚至比float还高), 但它不会脱离文档流
+                    3. 需要设置偏移量offset, 与margin不同的是, offset只会影响自己
+                        top/bottom  控制垂直移动
+                        left/right  控制水平移动
+            */
+            position: relative;
+            left:200px;
+            top:-200px;
+        }
+
+        .box3{
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+        }
+
+        .box4{
+            width: 200px;
+            height: 200px;
+            background-color: aquamarine;
+
+            /* 
+                - 绝对定位:
+                    1. 相对于其包含块进行定位
+                    2. 会提升元素一个层级, 且元素会从文档流中脱离
+                    3. 元素性质改变, 行内元素会变成块元素, 块的大小被内容决定
+                    4. 也需要设置偏移量
+                
+                包含块 (containing block)
+                    - 正常情况下:
+                        包含块是离当前元素最近的祖先块元素
+                    - 绝对定位下:
+                        包含块是离当前元素最近的开启了定位的祖先元素
+                        <html>这一根元素是初始包含块
+            
+            */
+            position: absolute;
+            top: 150px;
+            left: 100px;
+        }
+
+        .box5_outer{
+            height: 64px;
+            /* 
+                这个父元素是块元素, 默认宽度是页面宽度
+                故box5宽度设置为100%之后可以规避"块的大小被内容决定"这一问题.
+            */
+        }
+        .box5{
+            height: 64px;
+            width: 100%;
+            background-color: beige;
+            line-height: 64px;
+            
+            /* 
+                - 固定定位:
+                    1. 也是一种绝对定位
+                    2. 唯一不同的是永远参照浏览器的视口来定位
+                
+                浏览器视口: 与滚动条位置无关
+            */
+            position: fixed;
+            top: 0;
+        }
+
+        .box6{
+            height: 200px;
+            width: 200px;
+            background-color: darkseagreen;
+
+            /* 
+                - 粘滞定位:
+                    1. 和相对定位的特点类似
+                    2. 不同的是元素在视口中到达某一设定位置之后会被固定
+            
+            */
+            position: sticky;
+            top: 0;
+        }
+
+        /* 
+            元素的层级:
+                对于开启了定位的元素, 可以通过z-index来指定元素的层级
+                z轴需要一个整数作为参数, 值越大层级越高, 即越优先显示
+            
+            若层级相同, 则优先显示靠下的元素
+        */
+    </style>
+</head>
+<body>
+    <div class="box1">1</div>
+    <div class="box2">2</div>
+    <div class="box3">3</div>
+    <div class="box4">4</div>
+    <div class="box5_outer">
+        <div class="box5">5</div>
+    </div>
+    <div class="box6">6</div>
+</body>
+
+</html>
