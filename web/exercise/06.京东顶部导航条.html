@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Html_Css-master/jonty/css/reset.css">
+    <link rel="stylesheet" href="../iconfont/font_3885891_vu5l1bc31pf/iconfont.css">
+    <link rel="stylesheet" href="../font awesome 6.21/css/all.css">
+    <title>京东顶部导航条</title>
+    <style>
+        body{
+            height: 2000px;
+            font: 12px/1.5 'Microsoft Yahei';
+        }
+
+        /* 顶部导航条 */
+        header{
+            height: 32px;
+            line-height: 32px;
+            background-color: rgb(227, 228, 229);
+        }
+        .top_content{
+            height: 100%;
+            width: 1187px;
+            margin: 0 auto;
+        }
+
+        /* 左侧定位选择 */
+        .pos{
+            float: left;
+            width: 60px;
+            height: 100%;
+        }
+        .pos .current_city{
+            color: rgb(153, 153, 153);
+            display: block;
+            line-height: 32px;
+            font-size: 12px;
+            text-decoration: none;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+            
+        }
+        .pos:hover .current_city{
+            color: rgb(227, 51, 51);
+            background-color: white;
+            border: 1px solid rgb(204,204,204);
+            border-bottom: 1px solid white;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+        }
+
+        .pos .city_list{
+            display: none;
+            width: 320px;
+            height: 436px;
+            background-color: white;
+            border: 1px solid rgb(204,204,204);
+            position: absolute;
+            top: 31px;
+            box-shadow: 1px 2px 2px rgba(0,0,0,.2);
+            z-index: 9;
+        }
+        .pos:hover .city_list{
+            display: block;
+        }
+        
+        
+        /* 右侧菜单栏 */
+        /* 菜单内容 */
+        .meau ul{
+            float: right;
+        }
+        .meau li{
+            float: left;
+            white-space: nowrap;
+        }
+
+        /* 选项分割线 */
+        .meau .line{
+            height: 32px;
+            line-height: 32px;
+            color: rgb(153, 153, 153);
+            font-size: 8px;
+        }
+        /* 超链接 */
+        .meau a{
+            text-decoration: none;
+            color: rgb(153, 153, 153);
+            font-size: 12px;
+            display: block;
+            height: 32px;
+            margin: 0 4px;
+            padding: 0 8px;
+        }
+        /* 超链接悬停 */
+        .meau li:hover:not(.line) .JD_bottom{
+            background-color: white;
+            height: 31px;
+            border-bottom: 1px solid white;
+        }
+        .meau li:hover a{
+            color: rgb(227, 51, 51);
+            
+        }
+        /* 向下符号 */
+        .meau a .fas{
+            font-size: 10px;
+        }
+        
+        
+        /* 我的京东 */
+        .meau .wodeJD{
+            position: relative;
+        }
+        .meau .JD_bottom{
+            position: relative;
+            z-index: 100;
+        }
+        .meau .JD_list{
+            width: 360px;
+            height: 270px;
+            background-color: white;
+            border: 1px solid rgb(204,204,204);
+            display: none;
+
+            position: absolute;
+            top: 31px;
+            left: -100px;
+            z-index: 9;
+        }
+        /* 显示白板 */
+        .wodeJD:hover .JD_list{ 
+            display: block;
+        }
+        </style>
+</head>
+<body>
+    <header>
+        <div class="top_content">
+            <div class="pos">
+                <a href="#" class="current_city">
+                    <span class="fas" style="color: red; font-size: 14px;">&#xf3c5;</span>
+                    &nbsp;广东
+                </a>
+                <div class="city_list"></div>
+            </div>
+            
+            <div class="meau">
+                <ul>
+                    <li>
+                        <a href="#" style="display: inline;">你好,请登录</a>
+                        <a href="#" style="color: rgb(241, 2, 21); display: inline;">免费注册</a>
+                    </li>
+                    
+                    <li class="line">│</li>
+                    
+                    <li><a href="#">我的订单</a></li>
+                    
+                    <li class="line">│</li>
+                    
+                    <li class="wodeJD">
+                        <a href="#" class="JD_bottom">
+                            我的京东
+                            <span class="fas fa-angle-down"></span>
+                        </a>
+                        <div class="JD_list"></div>
+                    </li>
+                    
+                    <li class="line">│</li>
+                    
+                    <li>
+                        <a href="#" style="color: rgb(255, 0, 0);">
+                            企业采购
+                            <span class="fas fa-angle-down"></span>
+                        </a>
+                    </li>
+                    
+                    <li class="line">│</li>
+                    
+                    <li>
+                    <a href="#">
+                        商家服务
+                        <span class="fas fa-angle-down"></span>
+                        </a>
+                    </li>
+                    
+                    <li class="line">│</li>
+                    
+                    <li>
+                    <a href="#">
+                        网站导航
+                            <span class="fas fa-angle-down"></span>
+                        </a>
+                    </li>
+                    
+                    <li class="line">│</li>
+                    
+                    <li><a href="#">手机京东</a></li>
+                    
+                    <li class="line">│</li>
+                    
+                    <li><a href="#">网站无障碍</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+</body>
+</html>
