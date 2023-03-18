@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Html_Css-master/jonty/css/reset.css">
+    <style>
+        a{
+            text-decoration: none;
+        }
+
+        .news_block{
+            margin: 100px;
+            width: 300px;
+            background-color: white;
+        }
+
+
+        /* news title */
+        .news_block .news_title{
+            border-top: 1px #ddd solid;
+            height: 20px;
+        }
+        .news_block .title{
+            border-top:1px red solid;
+            padding: 6px 0 10px 0px;
+            font-size: 16px;
+            font-weight: bold;
+            float: left;
+            position: relative;
+            margin-top: -1px;
+        }
+        .news_block .title a{
+            color:black;
+        }
+
+
+        /* news img */
+        .news_block .news_img{
+            width: 300px;
+            height: 160px;
+        }
+        .news_block .news_img h3{
+            color: white;
+            font-weight: bold;
+            margin-top: -25px;
+            padding-left: 15px;
+        }
+
+
+        /* news list */
+
+        .news_block li{
+            padding-top: 10px;
+            line-height: 14px;
+            font-size: 14px;
+        }
+
+        .news_block .news_list a{
+            color: #666;
+        }
+        .news_block a:hover{
+            color: RGB(243, 69, 64);
+        }
+        .news_block .news_list li::before{
+            content: '■';
+            color: rgb(221, 221, 221);
+            font-size: 10px;
+            padding-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="news_block">
+
+        <div class="news_title">
+            <h2  class="title">
+                <a href="javascript:;">体育</a>
+            </h2>
+        </div>
+        
+
+        <div class="news_img">
+            <a href="javascript:;">
+                <img src="../Html_Css-master/jonty/img/03/1.jpeg">
+                <h3>费德勒首付迪米 扶额摇头不满发挥</h3>
+            </a>
+        </div>
+        
+        <ul class="news_list">
+            <li>
+                
+                <a href="javascript:;">乔治:我爱LA 喜欢和LBJ一起打球</a>
+            </li>
+
+            <li>
+                <a href="javascript:;">格林:3年前降薪就在等KD 特制T恤嘲讽LBJ</a>
+            </li>
+
+            <li>
+                
+                <a href="javascript:;">塔克4000双鞋让保罗羡慕嫉妒 乔丹被震惊</a>
+            </li>
+
+            <li>
+                <a href="javascript:;">CBA下季新赛制:常规赛4组循环 增至46轮</a>
+            </li>
+        </ul>
+    </div>
+    
+
+</body>
+</html>
