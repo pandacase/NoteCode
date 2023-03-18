@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Html_Css-master/jonty/css/reset.css">
+    <link rel="stylesheet" href="../font awesome 6.21/css/all.css">
+    <title>Document</title>
+    <style>
+        /* 
+            font属性可以同时设置多个跟字体相关的属性
+                font: (粗细)  (风格)  字体大小(/行高)  字体族
+                    如果不写行高会被设置为默认值(注意, 可以覆盖之前的设置)
+
+        */
+
+        /* 
+            字体族
+            font-family
+                1. 可以选择类别
+                    - serif      衬线字体
+                    - sans-serif 非衬线字体
+                    - monospace  等宽字体
+                2. 也可以选择具体字体, 可以同时指定多个, 逗号隔开, 顺位使用
+                    字体能否使用由用户电脑中已安装的字体决定
+                    - 'Microsoft YaHei'
+                    - 'Heiti SC'
+                    - 'tohoma'
+                    - 'arial'
+                    - 'Hiragino'
+                    - 'Sans GB'
+                    一般在最后放一个sans-serif来作为保险
+                3. font-face可以将服务器中的字体直接提供给用户使用
+                    @font-face{
+                        font-family:'myfont';       //指定字体的名字
+                        src:url('./font/xxx.ttf');  //服务器中字体的路径
+                    }
+        */
+        .a{
+            font-family: serif;
+        }
+
+        /* 
+            图标字体(iconfont)
+                在网页中使用的小图标, 可以直接设置为字体
+                通过font-face来引入, 以使用字体的形式来使用图标(可以调大小和颜色)
+                在css的伪元素中设置图标字体
+                    1. 在content中放入\+编码
+                    2. 在all.css最下方中找到以下内容复制进来
+                        fab:
+                            font-family: 'Font Awesome 5 Brands';
+                        fas:
+                            font-family: 'Font Awesome 5 Free';
+                            font-weight: 900;
+                        
+        
+            font awesome 使用步骤
+                1. 从 https://fontawesome.com/ 下载并解压到项目路径中
+                2. 通过link引入all.css
+                3. 通过类名来使用图标字体(图标名称可以在zeal中查找)
+                    <i class="fas fa-bell-slash"></i>
+                    <i class="fab fa-accesssible-icon"></i>
+                    fas和fab是一个大类, 一般是二者其中一个
+        */
+        
+        .list li::before{
+            content: '\f111';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            font-size: 10px;
+        }
+
+
+        /* 
+        其他文本相关属性
+            line-height 行高(文字占有的实际高度)
+                1.可以直接指定大小(px em)
+                2.也可以设置一个整数, 为字体大小的倍数
+                - 行间距 = 行高 - 字体大小
+            font-weight 字重(字体的粗细)
+                normal  不加粗
+                bold    加粗
+                100-900 九个级别(用处不大)
+            font-style  风格
+                normal  无风格
+                italic  斜体 
+            text-align  文本对齐
+                left    左对齐
+                right   右对齐
+                center  居中
+                justify 两端对齐
+            vertical-align  垂直对齐
+                baseline    默认值 基线对齐(中英文的基线不共享)
+                top         顶部对齐
+                bottom      底部对齐
+                middle      居中对齐
+            text-decoration 文本修饰 
+                none        无修饰
+                underline   下划线
+                line-through删除线
+                overline    上划线
+                可以放第二个参数, 指定线的颜色
+                也可以再放第三个参数, 指定线的样式(例如dotted)
+            white-space     空白处理
+                normal      正常(自动换行)
+                nowrap      不自动换行
+                pre         保留html中全部的空白
+            text-overflow   文本溢出处理
+                ellipsis    省略号
+        */
+        
+        .text{
+            /* 下方演示如何把溢出的文本变成省略号 */
+            width: 100px;
+            white-space:nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+</head>
+<body>
+    <p class="a">Hello 世界</p>
+    
+    <br>
+
+    <!-- 类名引入: -->
+    <i class="fas fa-bell"></i> 
+    <!-- 实体引入: -->
+    <i class="fas">&#xf1f6;</i>
+    
+    <br><br>
+    
+    <div>
+        <a href="#" class="down_list">
+            <i class="fas fa-angle-down"></i>
+        </a>
+    </div>
+
+    <br>
+
+    <div class="list">
+        <ul>
+            <li>Num1</li>
+            <li>Num2</li>
+            <li>Num3</li>
+            <li>Num4</li>
+        </ul>
+    </div>
+
+    <div class="text">312 32 3124 12 749 12031 8294 12606 4 512 854 73 60187 450 754 893 6408 912 67 036 81 274 51</div>
+</body>
+</html>
