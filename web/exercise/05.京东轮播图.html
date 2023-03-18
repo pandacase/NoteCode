@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Html_Css-master/jonty/css/reset.css">
+    <title>京东轮播图</title>
+    <style>
+        .trun{
+            height: 470px;
+            width: 590px;
+            position: relative;
+            margin: 30px auto;
+        }
+        .trun .cho1, .cho2, .cho3, .cho4{
+            position:absolute;
+            top: 440px;
+            text-decoration: none;
+            color: rgba(77,77,77,.3);
+            font-size: 20px;
+            line-height: 20px;
+            padding: 5px;
+            z-index: 2;
+        }
+        .trun .cho1{
+            left: 20px;
+        }
+        .trun .cho2{
+            left: 40px;
+        }
+        .trun .cho3{
+            left: 60px;
+        }
+        .trun .cho4{
+            left: 80px;
+        }
+
+
+        
+        
+        .turn, .pic1, .pic2, .pic3, .pic4{
+            position: absolute;
+            z-index: 0;
+        }
+        
+        .trun a:hover{
+            z-index: 1;
+            color: rgba(0,0,0,.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="trun">
+        <ul>
+            <li>
+                <a href="#" class="num1">
+                    <a href="#" class="pic1">
+                        <img src="../source/pictures/1.jpg">
+                    </a>
+                    <a href="#" class="cho1">●</a>
+                </a>
+            </li>
+            <li class="num2">
+                <a href="#" class="pic2">
+                    <img src="../source/pictures/2.jpg">
+                </a>
+                <a href="#" class="cho2">●</a>
+            </li>
+            <li class="num3">
+                <a href="#" class="pic3">
+                    <img src="../source/pictures/3.jpg">
+                </a>
+                <a href="#" class="cho3">●</a>
+            </li>
+            <li class="num4">
+                <a href="#" class="pic4">
+                    <img src="../source/pictures/4.jpg">
+                </a>
+                <a href="#" class="cho4">●</a>
+            </li>
+        </ul>
+
+
+    </div>
+</body>
+</html>
